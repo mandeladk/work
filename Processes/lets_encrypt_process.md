@@ -34,6 +34,7 @@ syntax:
 ```
 screen -x desiredScreenName
 ```
+note: use the `-d` option to attach to a session listed as already attached  
 example:
 ```
 screen -x web.nkarrick.com_Cert_Renewal
