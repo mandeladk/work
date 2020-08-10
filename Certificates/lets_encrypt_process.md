@@ -21,7 +21,7 @@ syntax:
 screen -ls
 ```
 example:
-```
+```Bash
 stepcg@STEPcgOffice-Dashboard:~$ screen -ls
 There is a screen on:
 	5855.web.nkarrick.com_Cert_Renewal	(08/10/2020 11:36:53 AM)	(Detached)
