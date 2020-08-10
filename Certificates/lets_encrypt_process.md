@@ -31,7 +31,7 @@ screen -x desiredScreenName
 ```
 example:
 ```
-screen -S web.nkarrick.com_Cert_Renewal
+screen -x web.nkarrick.com_Cert_Renewal
 ```
 
 ### Disconnecting temporarily from a Screen Session
