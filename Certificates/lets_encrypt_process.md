@@ -1,4 +1,9 @@
 # Helpful Tips
+
+### Screen Overview
+Screen is a terminal multiplexor. It allows an operator to run commands within a contained session, and escape back to the main window without losing access, or breaking running processes. For more information see:
+https://www.gnu.org/software/screen/manual/screen.html#Overview
+
 ### Creating a New Screen Session
 syntax:
 ```
