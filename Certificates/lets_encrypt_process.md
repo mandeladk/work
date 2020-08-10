@@ -34,8 +34,23 @@ example:
 screen -S web.nkarrick.com_Cert_Renewal
 ```
 
-### Disconnecting from a Screen Session
+### Disconnecting temporarily from a Screen Session
 press `ctrl`+`a` immediately followed by `d`
+
+### Disconnecting/Deleting a screen session permanently
+There are two ways to remove a screen session.
+
+1. Type `exit` while connected to the screen session.
+2. List screen sessions and kill the session by Process ID (PID). The PID will prepend the screen session name.
+    ```
+    stepcg@STEPcgOffice-Dashboard:~$ screen -ls
+    There is a screen on:
+        11641.web.nkarrick.com_Cert_Renewal	(08/10/2020 12:56:09 PM)	(Detached)
+    1 Socket in /run/screen/S-stepcg.
+    stepcg@STEPcgOffice-Dashboard:~$ kill 11641
+    stepcg@STEPcgOffice-Dashboard:~$ 
+    ```
+
 
 # Process
 1. Connect to an existing session or create a screen session for this instance
