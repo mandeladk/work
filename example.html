@@ -1055,83 +1055,77 @@ body .markdown-body
 .codehilite .vi{color:teal}
 .codehilite .il{color:#009999}
 .codehilite .gc{color:#999;background-color:#EAF2F5}
-</style><title>ClintonCountyIDE</title></head><body><article class="markdown-body"><h1 id="customer">Customer<a class="headerlink" href="#customer" title="Permanent link"></a></h1>
-<p>Clinton County Schools</p>
-<h2 id="description-of-problem">Description of Problem<a class="headerlink" href="#description-of-problem" title="Permanent link"></a></h2>
-<p>Clinton County Schools uses Extreme Networks Identity Engines(IDE) (End of Sale) solution as RADIUS based network access control. The IDE server provides a central point for authentication for wireless networks, including 802.1x for Microsoft Active Directory(AD) joined machines, as well as MAC-authentication for non-AD machines, and guest/BYOD access. The solution in place provides the ability for IDE to provide the authenticator (generally the access point), the user-name of the connected client. The access point can then forward the user-name upstream via RADIUS accounting to the districts Lightspeed content filter. This provides a single-sign-on(SSO) solution preventing users from constantly re-authentication to a known network. </p>
-<p>The IDE server database has become corrupt and is no longer able to provide the user-name information to the access point, thus breaking the solution entirely. Previous efforts include deploying a new instance of IDE, and migrating the configuration via the built in backup/restore methods. This effort proved unsuccessful, as the problem was still exhibited in the new instance.</p>
-<h2 id="proposed-solution">Proposed Solution<a class="headerlink" href="#proposed-solution" title="Permanent link"></a></h2>
-<p>STEP CG proposes deploying a new IDE instance and manually configuring the new instance to avoid inheriting database problems. The steps include, but are not limited to:</p>
+</style><title>example</title></head><body><article class="markdown-body"><h1 id="h1-header">H1 Header<a class="headerlink" href="#h1-header" title="Permanent link"></a></h1>
+<p>Plain paragraph</p>
+<h2 id="h2-header">H2 Header<a class="headerlink" href="#h2-header" title="Permanent link"></a></h2>
+<p>Plain Paragraph</p>
+<h3 id="h3-header">H3 Header<a class="headerlink" href="#h3-header" title="Permanent link"></a></h3>
+<p>Plain Paragraph</p>
+<table>
+<thead>
+<tr>
+<th>Column 1</th>
+<th>Column 2</th>
+<th>Column 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>row 1</td>
+<td>sample</td>
+<td>data</td>
+</tr>
+<tr>
+<td>row 2</td>
+<td>sample</td>
+<td>data</td>
+</tr>
+<tr>
+<td><strong>row 3</strong></td>
+<td><strong>is</strong></td>
+<td><strong>BOLD</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Unordered List</p>
 <ul>
-<li>Deploying a new IDE OVA in the existing vmWare environment</li>
-<li>Migrating the licensing from the old IDE instance to the new instance</li>
-<li>Configuring Active Directory integration</li>
-<li>Configuring all required IDE internal user/device groups</li>
-<li>Configuring all required authenticators</li>
-<li>Configuring all RADIUS / User policies</li>
-<li>Configuring all RADIUS / MAC policies</li>
-<li>Creating and configuring all RADIUS outbound values as necessary</li>
-<li>Exporting known device MAC tables for import into new instance</li>
-<li>Importing MAC tables</li>
-<li>Testing database functionality after MAC import</li>
-<li>Testing implementations throughout configuration</li>
-<li>Testing final implementation with customer as on-site resource for verification</li>
+<li>looks</li>
+<li>like </li>
+<li>this</li>
 </ul>
-<h2 id="proposed-time-line">Proposed Time-line<a class="headerlink" href="#proposed-time-line" title="Permanent link"></a></h2>
-<table>
-<thead>
-<tr>
-<th>Description</th>
-<th>Time</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Discovery  and Data Collection</td>
-<td>1 Hour(s)</td>
-</tr>
-<tr>
-<td>Initial Deployment &amp; licensing</td>
-<td>1 Hour(s)</td>
-</tr>
-<tr>
-<td>Advanced configuration</td>
-<td>4 Hour(s)</td>
-</tr>
-<tr>
-<td>Testing and Verification</td>
-<td>2 Hour(s)</td>
-</tr>
-<tr>
-<td><strong>Total</strong></td>
-<td><strong>8   Hour(s)</strong></td>
-</tr>
-</tbody>
-</table>
-<h2 id="cost">Cost<a class="headerlink" href="#cost" title="Permanent link"></a></h2>
-<table>
-<thead>
-<tr>
-<th>Rate</th>
-<th>Quantity</th>
-<th>Total</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>$125/hr</td>
-<td>8</td>
-<td>$1000</td>
-</tr>
-</tbody>
-</table>
-<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link"></a></h2>
-<ul>
-<li>STEP CG will need cooperation of customer to coordinate licensing through Extreme Networks customer portal</li>
-<li>Customer will need to be available for testing and validation phase at a minimum to ensure full functionality</li>
-<li>Customer may need an active support contract with Extreme Networks in order for license to be transferable.<ul>
-<li>This may be complicated if the customer is not under an existing contract, as support may no longer be available.</li>
+<p>Sample text with <code>code</code> in line</p>
+<div class="codehilite"><pre>This is a block of code
+that can be
+multipe lines
+</pre></div>
+
+<p>Ordered List</p>
+<ol>
+<li>looks</li>
+<li>something</li>
+<li>like </li>
+<li>this</li>
+</ol>
+<p>Nested Lists</p>
+<ol>
+<li>Layer 1<ul>
+<li>Layer 2</li>
+<li>Item 2</li>
 </ul>
 </li>
-<li>There is the potential that importing known devices introduces the same database problem to the new instance. If this occurs, customer understands that it may be necessary to wipe the guest device database, requiring all users to re-authenticate. There is potential that a corruption of the database occurs with known &ldquo;district-owned&rdquo; devices, in which STEP CG can wipe this table as well, and try to import smaller groups to avoid the issue. Unfortunately this cannot be forecasted. </li>
+<li>Number 2</li>
+</ol>
+<p><em>italicized text</em> &lt;- looks like that</p>
+<p>inserting a horizontal line</p>
+<hr />
+<p>Link to <a href="https://www.google.com">Google</a></p>
+<dl>
+<dt>Term</dt>
+<dd>definition</dd>
+</dl>
+<p>Task List</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> Write the press release</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Update the website</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Contact the media </li>
 </ul></article></body></html>

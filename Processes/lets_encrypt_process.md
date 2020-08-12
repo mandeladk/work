@@ -1,3 +1,7 @@
+# Overview
+
+This document outlines the technical operating procedure for support engineers to utilize when updating SSL certificates on various client devices that are not visible on the public internet for automated certificate generation. The process describes a way for a support engineer to utilize tools that will help prevent problems when generating certficates. This includes dedicating a personal machine to the process, immobilizing the support engineer, as well as enabling hand-off if necessary to other support engineers.
+
 # Helpful Tips
 
 ### Screen Overview
